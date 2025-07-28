@@ -1,13 +1,13 @@
 {
-  "name": "instabot",
+  "name": "𝐒𝐡𝐢𝐏𝐮 𝐀𝐢 🤖💨",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["chitron", "shipu", "bot"],
+  "author": "Chitron Bhattacharya",
   "license": "ISC",
   "dependencies": {
     "async": "^3.2.4",
