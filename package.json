@@ -4,6 +4,7 @@
   "description": "Instagram AI Bot by Chitron Bhattacharjee",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm install rimraf typescript tslib",
     "start": "node server.js & node index.js"
   },
   "keywords": [
@@ -30,9 +31,11 @@
     "openai": "^3.3.0",
     "pet-pet-gif": "^1.0.9",
     "readline": "^1.3.0",
-    "rimraf": "^5.0.5",
-    "tslib": "^2.6.2",
-    "typescript": "^5.4.5",
     "youtube-search-api": "^1.1.1"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5",
+    "tslib": "^2.6.2"
   }
 }
