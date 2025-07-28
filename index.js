@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path"); // add path module
 const async = require("async");
-const sql = require('mssql');
+
 
 const { IgApiClient } = require("instagram-private-api")
 const { withRealtime } = require("instagram-mqtt");
@@ -33,7 +33,7 @@ const openai = new OpenAIApi(configuration);
 let playground = new PlaygroundAI()
 
 const messages_container = new MessagesContainer(config.MaxMessagesInCache, !config.StoreMessages)
-const ContextHandler = new ContextContainer(config.MaxMessagesInContext, ig, sql);
+const ContextHandler = new ContextContainer(config.MaxMessagesInContext, ig);
 
 let threadStore;
 let userStore;
@@ -104,9 +104,14 @@ try { userStore = JSON.parse(fs.readFileSync(__dirname + "/user_data.json", "utf
 
     await ThreadsEvaluator({ loggedInUser, threads })
 
-    await sql.connect(config.MSSQL_Connection_String)
+    const mongoose = require("mongoose");
+await mongoose.connect(config.MongoDB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+console.log("✅ Connected to MongoDB")
 
-    console.log(`connected to Database`)
+
 
     const messageQueue = async.queue((task, callback) => {
         const { threadID, item_id, reaction, type, message } = task;
