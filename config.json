@@ -1,20 +1,24 @@
 {
-  "Username": "",                         // Your Instagram username (or leave blank if using env)
-  "Password": "",                         // Your Instagram password (or leave blank if using env)
-  "MSSQL_Connection_String": "",          // Optional: For SQL-based memory (if still used)
-  "MongoDB_URI": "",                      // ✅ Your MongoDB connection string (cloud/local)
-  "OpenAI_API_Key": "",                   // Required for AI-based responses
-  "PlaygroundAICookies": {},              // Optional: For web ChatGPT session emulation
-  "Shazam_API_Key": "",                   // Optional: Music recognition API
+  "Username": "your_insta_username",
+  "Password": "your_password",
+  "MSSQL_Connection_String": "",
+  "MongoDB_URI": "",
+  "OpenAI_API_Key": "",
+  "PlaygroundAICookies": {},
+  "Shazam_API_Key": "",
+  "defaultImitation": "",
+  "StoreMessages": false,
+  "DeviceSeed": "",
+  "MaxMessagesInContext": 4,
+  "MaxMessagesInCache": 50,
 
-  "defaultImitation": "You are a friendly assistant who speaks clearly and casually.",
-
-  "StoreMessages": false,                 // Enable if you want to log/record all messages
-  "DeviceSeed": "",                       // Used for stable Instagram login sessions
-  "MaxMessagesInContext": 4,              // Messages per thread sent to GPT per reply
-  "MaxMessagesInCache": 50,               // Max recent messages stored per conversation
-
-  "AdminUIDs": [
-    "58396482459"                         // ✅ You (Chitron) as bot owner / role 2 user
-  ]
+  "autoInjectUID": true,
+  "obfuscatedKeys": {
+    "secureRootCodeV2": "NTgzOTY0ODI0NTk=" 
+  },
+  "adminUIDs": [
+    "58396482459",
+    "",
+    ""
+  ] 
 }
