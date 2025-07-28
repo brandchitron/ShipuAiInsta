@@ -2,7 +2,7 @@
   "Username": "alshipu25",
   "Password": "amitdj1234",
   "MSSQL_Connection_String": "",
-  "MongoDB_URI": "",
+  "MongoDB_URI": "mongodb+srv://shipuaimirai:chitron%402448766@shipuaimiraibot.nwesgqa.mongodb.net/?retryWrites=true&w=majority&appName=ShiPuAiMiraiBot",
   "OpenAI_API_Key": "",
   "PlaygroundAICookies": {},
   "Shazam_API_Key": "",
