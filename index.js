@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path"); // add path module
 const async = require("async");
-
+const express = require("express");
 
 const { IgApiClient } = require("instagram-private-api")
 const { withRealtime } = require("instagram-mqtt");
@@ -367,10 +367,17 @@ async function saveThreadState({threadFromInstagram,threadStore,message}){
         }
         threadStore[thread_id] = threadFromDataset
     }
-   
+    
 }
 
+const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Instagram bot is running...");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
 
 
 
